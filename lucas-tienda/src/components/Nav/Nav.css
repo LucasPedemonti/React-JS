@@ -1,22 +1,3 @@
-body{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
- 
-    
-}
-
-header{
-    width: 100%;
-    height: 60px;
-    display: flex;
-    font-family: "Poppins", sans-serif;
-    font-size: 0.8rem;
-    font-weight: 200;
-    background-color: rgba(5, 56, 9, 0.185);
-    border-bottom-left-radius: 50px;
-}
-
 /*containerBrand*/
 
 header .containerBrand{
@@ -28,7 +9,7 @@ header .containerBrand{
 
 /*containerList*/
 
-header .containerItemList{
+header .containerItemLinks{
     width: 70%;
     height: 100%;
     display: flex;
@@ -36,7 +17,7 @@ header .containerItemList{
     justify-content: flex-end;
 }
 
-header nav.containerItemList ul{
+header nav.containerItemLinks ul{
     list-style: none;
     display: flex;
     width: 100%;
@@ -44,7 +25,7 @@ header nav.containerItemList ul{
     align-items: center;
     
 }
-header nav.containerItemList ul li {
+.NavLink {
     cursor: pointer;
     position: relative;
     display: flex;
@@ -52,9 +33,10 @@ header nav.containerItemList ul li {
     align-items: center;
     padding-left: 15px;
     margin-left: 0.5%;
+    text-decoration: none;
     
 }
-header nav.containerItemList ul li::after{
+.NavLink::after{
     content: "";
     width: 100%;       
     height: 3px;
@@ -68,19 +50,7 @@ header nav.containerItemList ul li::after{
     transform-origin: bottom left;
     transition: transform 0.2s ease;
 }
-header nav.containerItemList ul li:hover::after {
+.NavLink:hover::after {
     transform: scaleX(1);
     transform-origin: bottom left; 
-}
-
-
-/*containerCart*/
-
-header .containerCart{
-    width: 10%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
 }
