@@ -5,7 +5,7 @@ import './Brand.css'
 const Brand = () => {
     return(
         <div className="brand">
-          <img src={brand} width="60" alt="Tienda LP" title="Tienda LP"></img>
+          <img src={brand} alt="Tienda LP" title="Tienda LP"></img>
         </div>
     )
 }

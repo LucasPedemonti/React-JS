@@ -1,19 +1,8 @@
-/*containerBrand*/
-.header .containerBrand{
-    width: 5px;
-    height: 100px;
-    display: flex;
-    position: absolute;
-    margin-top: 2px;
-    justify-content: flex-start;
-} 
-
-
 /*containerList*/
-
 header .containerItemLinks{
-    width: 70%;
+    width: 100%;
     height: 100%;
+    margin-right: 50px;
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -27,6 +16,7 @@ header nav.containerItemLinks ul{
     
 }
 .NavLink {
+    width: auto;
     cursor: pointer;
     position: relative;
     display: flex;
@@ -52,4 +42,9 @@ header nav.containerItemLinks ul{
 .NavLink:hover::after {
     transform: scaleX(1);
     transform-origin: bottom left; 
+}
+
+div .containerCart{
+    margin-right: 30px;
+    width: 50px;
 }
