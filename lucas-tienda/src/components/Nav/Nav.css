@@ -1,11 +1,13 @@
 /*containerBrand*/
-
-header .containerBrand{
-    width: 20%;
-    height: 100%;
+.header .containerBrand{
+    width: 5px;
+    height: 100px;
     display: flex;
-    justify-content: center;
-}
+    position: absolute;
+    margin-top: 2px;
+    justify-content: flex-start;
+} 
+
 
 /*containerList*/
 
@@ -17,10 +19,9 @@ header .containerItemLinks{
     justify-content: flex-end;
 }
 
-header .containerItemLinks ul{
-    list-style: none;
+header nav.containerItemLinks ul{
     display: flex;
-    width: 100%;
+    width: 50%;
     justify-content: flex-end;
     align-items: center;
     
@@ -31,10 +32,8 @@ header .containerItemLinks ul{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-left: 15px;
-    margin-left: 0.5%;
-    text-decoration: none;
-    
+    margin-left: 20px;    
+    text-decoration: none;    
 }
 .NavLink::after{
     content: "";

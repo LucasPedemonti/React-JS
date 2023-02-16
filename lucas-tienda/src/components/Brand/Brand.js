@@ -1,8 +1,12 @@
 import brand from "../../img/logolp.png";
+import './Brand.css'
+
 
 const Brand = () => {
     return(
-        <img src={brand} alt="Tienda LP" title="Tienda LP"></img>
+        <div className="brand">
+          <img src={brand} width="60" alt="Tienda LP" title="Tienda LP"></img>
+        </div>
     )
 }
 

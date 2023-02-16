@@ -3,11 +3,10 @@ import CartWidget from "../CartWinget/CartWidget";
 import './Nav.css'
 // import { Link } from "react-router-dom";
 import { NavLink } from "react-router-dom";
+import { red } from "@mui/material/colors";
 
 let activeStyle = {
-    color: "red",
-    backgroundColor: "white",
-    padding: "10px"
+   color: red,  
   };
   
 
@@ -15,7 +14,11 @@ const Nav = () => {
     return(
         <header className="header">
             <div className="containerBrand">
-                <Brand />
+                <NavLink
+                    to="/"                    
+                >
+                    <Brand />
+                </NavLink>
             </div>
             <nav className="containerItemLinks">
                 <ul>
