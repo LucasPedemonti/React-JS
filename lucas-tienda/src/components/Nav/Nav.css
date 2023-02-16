@@ -18,6 +18,8 @@ header nav.containerItemLinks ul{
 .NavLink {
     width: auto;
     cursor: pointer;
+    color: black;
+    font-size: 0.9rem;
     position: relative;
     display: flex;
     justify-content: center;
