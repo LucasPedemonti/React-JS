@@ -13,7 +13,7 @@ import ProductDetails from "./Pages/ProductDetails/ProductDetails";
 import Nav from './components/Nav/Nav';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 import ProductContainer from './components/ProductContainer/ProductContainer';
- 
+
 
 
 function App() {
@@ -31,11 +31,12 @@ function App() {
         </Routes>
       </div>
       <div>
-        <ItemListContainer />
+         <ItemListContainer />
       </div>
       <div>
         <ProductContainer />
       </div>
+     
     </Router>     
   );
 }

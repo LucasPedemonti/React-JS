@@ -13,7 +13,7 @@ let activeStyle = {
 
 const Nav = () => {
     return(
-        <header>
+        <header className="header">
             <div className="containerBrand">
                 <Brand />
             </div>
@@ -66,7 +66,7 @@ const Nav = () => {
             </div>
 
         </header>
-    )
-}
+    );
+};
 
 export default Nav;
