@@ -1,5 +1,6 @@
 import brand from "../../img/logolp.png";
-import './Brand.css'
+import './Brand.css';
+
 
 
 const Brand = () => {

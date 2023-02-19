@@ -22,7 +22,7 @@ const ProductList = () => {
       {users.map((user) => {
         return (
           <Link to={`/detail/${user.id}`}>
-            <ProductContainer  />
+            <ProductContainer key={user.id} data={user} />
           </Link>
         );
       })}

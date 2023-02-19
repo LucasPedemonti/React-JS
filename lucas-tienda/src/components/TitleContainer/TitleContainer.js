@@ -1,7 +1,7 @@
 import React from 'react'
-import "./ItemListContainer.css"
+import "./TitleContainer.css"
 
-const ItemListContainer = () => {
+const TitleContainer = () => {
   return (
     <div className='saludo'>
       <p>
@@ -11,4 +11,4 @@ const ItemListContainer = () => {
   )
 }
 
-export default ItemListContainer;
+export default TitleContainer;
