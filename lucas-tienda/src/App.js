@@ -1,39 +1,44 @@
-//Estilo App
-import './App.css';
+import React from "react";
+import "./App.css";
+
 // REACT ROUTER DOM
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-//Pages
-import Home from './Pages/Home/Home';
-import MotherBoard from "./Pages/MotherBoard/MotherBoard";
-import NoteBook from "./Pages/NoteBook/NoteBook";
-import PlacasDeVideo from "./Pages/PlacasDeVideo/PlacasDeVideo";
-import Contact from "./Pages/Contact/Contact";
-import ProductDetail from "./Pages/ProductDetail/ProductDetail";
+
 //Components
-import TitleContainer from './components/TitleContainer/TitleContainer'
 import Nav from './components/Nav/Nav';
+
+
+
+
+
+//Views
+import Home from "./views/Home/Home";
+import About from "./views/About/About";
+import Contact from "./views/Contact/Contact";
+import Shop from "./views/Shop/Shop";
+import ProductDetail from "./views/ProductDetail/ProductDetail";
+import GamingProducto from "./views/GamingProducto/GamingProducto";
 
 
 
 
 const App = () => {
   return (
-    <Router>
-      <div className="App">
-        <Nav />
-        <TitleContainer />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/motherBoard" element={<MotherBoard />} />
-          <Route path="/notebook" element={<NoteBook />} />
-          <Route path="/placasDeVideo" element={<PlacasDeVideo />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/detail/:id" element={<ProductDetail />} />
-        </Routes> 
+    <Router>      
+        <div className="App">
+          <Nav />              
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/shop" element={<Shop />} /> 
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />       
+            <Route path="/details/:id" element={<ProductDetail />} />
+            <Route path="/gaming-producto/:producto" element={<GamingProducto />} />
+          </Routes> 
+                 
+        </div>
          
-      </div>     
-    </Router>
-       
+    </Router>       
   );
 };
 

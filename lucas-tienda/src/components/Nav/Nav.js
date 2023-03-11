@@ -4,6 +4,8 @@ import './Nav.css'
 // import { Link } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 import { red } from "@mui/material/colors";
+import MenuDesplegable from "../MenuDesplegable/MenuDesplegable";
+
 
 let activeStyle = {
    color: red,  
@@ -14,47 +16,27 @@ const Nav = () => {
     return(
         <header className="header">
             <div className="containerBrand">
-                <NavLink
-                    to="/"                    
-                >
+                <NavLink to="/" >
                     <Brand />
                 </NavLink>
             </div>
             <nav className="containerItemLinks">
                 <ul>
-
                     <NavLink
                         to="/"
                         className="NavLink"
                         style={({ isActive }) => (isActive ? activeStyle : undefined)}
                         >
                         Home
-                    </NavLink>
-
+                    </NavLink>                                 
                     <NavLink
-                        to="/MotherBoard"
+                        to="/Shop"
                         className="NavLink"
                         style={({ isActive }) => (isActive ? activeStyle : undefined)}
                         >
-                        Motherboard
+                        Shop
                     </NavLink>
-
-                    <NavLink
-                        to="/NoteBook"
-                        className="NavLink"
-                        style={({ isActive }) => (isActive ? activeStyle : undefined)}
-                        >
-                        Notebook
-                    </NavLink>
-
-                    <NavLink
-                        to="/PlacasDeVideo"
-                        className="NavLink"
-                        style={({ isActive }) => (isActive ? activeStyle : undefined)}
-                        >
-                        Placas de video
-                    </NavLink>
-
+                    <MenuDesplegable />       
                     <NavLink
                         to="/Contact"
                         className="NavLink"

@@ -1,0 +1,12 @@
+.shopContainer {
+	width: 90%;
+	margin-top:70px;
+}
+.shopTitle{
+	margin-top: 0px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: sans-serif;
+	text-decoration: underline;
+}

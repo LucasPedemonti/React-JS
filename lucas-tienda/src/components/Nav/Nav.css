@@ -39,7 +39,7 @@ header nav.containerItemLinks ul{
     width: auto;
     cursor: pointer;
     color: black;
-    font-size: 0.9rem;
+    font-size: 15px;
     position: relative;
     display: flex;
     justify-content: center;
