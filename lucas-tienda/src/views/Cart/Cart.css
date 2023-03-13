@@ -11,13 +11,9 @@
 }
 
 .btnASendAction {
-	background: rgb(108, 14, 14);
-	background: radial-gradient(
-		circle,
-		rgba(108, 14, 14, 1) 77%,
-		rgba(172, 34, 34, 1) 100%
-	);
-	color: white;
+	background: rgb(146, 150, 146);
+	
+	color: rgb(31, 28, 28);
 	height: 54px;
 	width: 400px;
 	border-radius: 8px;
@@ -25,11 +21,16 @@
 	transition: background, color 0.5s;
 	outline: #ff0000;
 	border: none;
+
 	margin: 10px;
 }
 
 .btnASendAction:hover {
-	color: red;
-	background: rgb(0, 0, 0);
-	background: radial-gradient(circle, rgb(11, 4, 4) 77%, rgb(0, 0, 0) 100%);
+	color: rgb(238, 226, 226);
+	background: rgba(70, 95, 67, 0.945);
+	
+}
+.FinalCompra{
+	font-family: "Poppins", sans-serif;
+	font-weight: 400;
 }

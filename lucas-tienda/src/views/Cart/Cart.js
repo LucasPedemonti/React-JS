@@ -20,14 +20,14 @@ const styles = {
 const initialState = {
   name: "",
   lastName: "",
-  city: "",
+  email: "",
 };
 
 const Cart = () => {
   const [values, setValues] = useState(initialState);
   const [purchaseID, setPurchaseID] = useState("");
 
-  // console.log(purchaseID);
+  
 
   const handleOnChange = (e) => {
     const { value, name } = e.target;
@@ -36,18 +36,18 @@ const Cart = () => {
 
   const handleOnSubmit = async (e) => {
     e.preventDefault();
-    // Add a new document with a generated id.
+   
     const docRef = await addDoc(collection(db, "purchases"), {
       values,
     });
-    // console.log("Document written with ID: ", docRef.id);
+   
     setPurchaseID(docRef.id);
     setValues(initialState);
   };
 
   return (
     <div style={styles.containerCart}>
-      <h1>Finaliza tu compra</h1>
+      <h1 className="FinalCompra">Finaliza tu compra</h1>
       <form className="FormContainer" onSubmit={handleOnSubmit}>
         <TextField
           placeholder="Name"
@@ -64,10 +64,10 @@ const Cart = () => {
           onChange={handleOnChange}
         />
         <TextField
-          placeholder="City"
+          placeholder="Email"
           style={{ margin: 10, width: 400 }}
-          name="city"
-          value={values.city}
+          name="email"
+          value={values.email}
           onChange={handleOnChange}
         />
         <button className="btnASendAction">Send</button>
