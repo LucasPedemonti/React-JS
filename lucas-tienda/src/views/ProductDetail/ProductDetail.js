@@ -19,9 +19,7 @@ const ProductDetail = () => {
   
   const { id } = useParams();
  
-  //console.log(id);
- // console.log(prodDetData);
-  useEffect(() => {
+   useEffect(() => {
     
     const getProducts = async () =>{
       const q = query(collection(db, "gaming"), where(documentId(), "==", id));

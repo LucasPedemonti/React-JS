@@ -20,6 +20,7 @@ const styles = {
 const initialState = {
   name: "",
   lastName: "",
+  telefono:"",
   email: "",
 };
 
@@ -61,6 +62,13 @@ const Cart = () => {
           style={{ margin: 10, width: 400 }}
           name="lastName"
           value={values.lastName}
+          onChange={handleOnChange}
+        />
+        <TextField
+          placeholder="Telefono"
+          style={{ margin: 10, width: 400 }}
+          name="telefono"
+          value={values.telefono}
           onChange={handleOnChange}
         />
         <TextField

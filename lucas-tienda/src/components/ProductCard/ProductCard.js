@@ -32,6 +32,7 @@ const ProductCard = ({ productData }) => {
           <ItemCount />
 
         </CardContent>
+        
       </CardActionArea>
     </Card>
   );

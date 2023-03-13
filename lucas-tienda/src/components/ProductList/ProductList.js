@@ -23,9 +23,8 @@ const ProductList = () => {
       const q = query(collection(db, "gaming"));
       const querySnapshot = await getDocs(q);
       const docs = [];
-      querySnapshot.forEach((doc) => {
-   
-        //console.log(doc.id, " => ", doc.data());
+      querySnapshot.forEach((doc) => {   
+       
         docs.push({...doc.data(), id: doc.id })
       });
       setProductData(docs);

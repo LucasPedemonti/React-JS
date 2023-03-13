@@ -18,8 +18,7 @@ const GamingProducto = () => {
     
     
     const { producto } = useParams();
-    //console.log(producto);
-    //console.log(productDataByProducto);
+    
 
     useEffect(() => {
     
