@@ -1,12 +1,15 @@
 .detailContainer{
-	display:"flex";
-	flex-direction:"column";
-	align-items:"center";
+	display: flex;
+	flex-direction: column;
 	width: 90%;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
 	margin-top: 70px;
 }
-.detailTitle{	
+.productDetailTitle{
 	display: flex;
+	width: 100%;
 	justify-content: center;
 	margin-top: 0px;
 	align-items: center;

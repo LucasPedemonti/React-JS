@@ -1,0 +1,15 @@
+.containerCard{
+    max-width: 300px;
+    margin: 30px;
+    border: black solid 1px;    
+}
+.cardcontent{
+    background-color: rgba(144, 151, 151, 0.555);
+}
+.titleCard{
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+    text-decoration:underline;
+    width: 100%;
+}
