@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 
 import ProductCard from "../ProductCard/ProductCard";
-
+import Spinner from "../Spinner/Spinner";
+import { Link } from "react-router-dom";
 
 import "./ProductList.css"
 
@@ -11,8 +12,10 @@ import { collection, query, getDocs } from "firebase/firestore";
 import { db } from "../../firebase/firebase";
 
 
+
 const ProductList = () => {
   const [productData, setProductData]= useState([]);
+  const [isLoading, setIsLoading] = useState(true);
  
   useEffect(() => {
     
@@ -27,19 +30,34 @@ const ProductList = () => {
       });
       setProductData(docs);
     };
-    getProducts();    
+    getProducts();  
+    setTimeout(() =>{
+      setIsLoading(false);
+    },1000)  
   }, []);
   
   return (    
-      <div className="cards">
-        {productData.map((producto) =>{
-          return (
-            <div key={producto.id}>
-              <ProductCard  productData={producto}/>
-            </div>          
-          );  
-        })}        
-      </div>   
+    <>
+     {isLoading ? (
+      <div  className="Spinner">
+        <Spinner />
+      </div>
+     ) : (
+        <div className="cards">
+          {productData.map((producto) =>{
+            return (
+              <Link
+                to={`details/${producto.id}`}
+                style= {{ textDecoration: 'none'}}
+                key={producto.id}
+                >
+                  <ProductCard  productData={producto}/>
+              </Link>                    
+            );  
+          })}        
+        </div>   
+      )}
+    </>  
   );
 };
 export default ProductList;

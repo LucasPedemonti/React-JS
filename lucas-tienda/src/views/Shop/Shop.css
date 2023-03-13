@@ -7,6 +7,9 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	font-family: sans-serif;
-	text-decoration: underline;
+	font-family: "Poppins", sans-serif;
+	font-weight: 200;
+	background-color: rgb(189, 197, 194);
+	width: 100%;
+	border-radius: 20px;
 }

@@ -7,10 +7,6 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 //Components
 import Nav from './components/Nav/Nav';
 
-
-
-
-
 //Views
 import Home from "./views/Home/Home";
 import About from "./views/About/About";
@@ -22,23 +18,25 @@ import GamingProducto from "./views/GamingProducto/GamingProducto";
 
 
 
+
 const App = () => {
   return (
+    <>
     <Router>      
-        <div className="App">
+      <div className="App">       
           <Nav />              
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/shop" element={<Shop />} /> 
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />       
-            <Route path="/details/:id" element={<ProductDetail />} />
+            <Route path="/shop/details/:id" element={<ProductDetail />} />
             <Route path="/gaming-producto/:producto" element={<GamingProducto />} />
-          </Routes> 
-                 
-        </div>
-         
-    </Router>       
+          </Routes>                  
+        
+      </div>       
+    </Router>
+    </>          
   );
 };
 
