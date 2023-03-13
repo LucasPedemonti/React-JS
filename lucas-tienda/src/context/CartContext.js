@@ -1,38 +1,86 @@
-// import React, { useState, useContext } from 'react';
-// const CartContext = React.createContext([]);
+import React, { useState, useContext, createContext } from 'react';
 
-// export const useCartContext = () => useContext(CartContext);
+const initialState = {
+    items: [],
+    isOpen: false,
+    addItemToCart: () => {},
+    getNumerOfItems: () => {},
+    openCart: () => {},
+    closeCart: () => {},
+    updateCart: () => {},
+    deleteCartItem: () => {},
+    emptyCart: () => {},
+};
 
-// const CartProvider = () => {
-//    const [cart, setCart] = useState([]);
-//     const newCart = cart.filter(prod => prod.id !== producto.id);
-//     newCart.push({ ...producto, quantity: newQuantity });
-//     setCart(newCart);
+const CartContext = createContext(initialState);
 
+const CartState = ({ children }) => {
+    const [items, setItems] = useState([]);
+    const [isOpen, setIsOpen] = useState([false]);
+    const handleOpenCart = () => {
+        setIsOpen(true);
+    };
+    const handleCloseCart = () => {
+        setIsOpen(false);
+    };
+    const handleAddItemToCart = (item, quantity) => {
+        const temp = [...items];
 
-//    const clearCart= () => setCart([]);
+        const found = temp.find((product) => product.id === item.id);
 
-//    const isInCart = (id) => cart.find(producto => producto.id === id) ? true : false;
+        if (found) {
+            found.quantity += quantity;
+            temp.push(item);
+        }
+        setItems([...temp]);
+    };
+    const handleNumberOfItems = () => {
+        const total = items.length;
+        return total;
+    };
+    const handleDeleteCartItem = (id) => {
+        const temp = [...items];
+        const found = temp.find((product) => product.id === id);
+         const index = temp.indexOf(found);
+        if (found) {
+            temp.splice(index, 1);
+        }
+        setItems([...temp]);
+    };
+    const handleUpdateCartItemQty = (id, quantity) => {
+        const temp = [...items];
+        const found = temp.find((product) => product.id === id);
+    
+        if (found) {
+          found.quantity = quantity;
+        }
+        setItems([...temp]);
+      };
+      const handleEmptyCart = () => {
+        setItems([]);
+      };
+      return (
+        <CartContext.Provider
+          value={{
+            items,
+            isOpen,
+            addItemToCart: handleAddItemToCart,
+            getNumberOfItems: handleNumberOfItems,
+            openCart: handleOpenCart,
+            closeCart: handleCloseCart,
+            updateCart: handleUpdateCartItemQty,
+            deleteCartItem: handleDeleteCartItem,
+            emptyCart: handleEmptyCart,
+          }}
+        >
+          {children}
+        </CartContext.Provider>
+      );
+};  
 
-//    const removeProduct = (id) => setCart(cart.filter(producto => producto.id !== id))
+export default CartState;
 
+export const useCartContext = () => {
+  return useContext(CartContext);
+};
 
-
-
-
-
-
-
-
-//   return (
-//     <CartContext.Provider value={{
-//       clearCart,
-//       isInCart,
-//       removeProduct,
-//     }}>
-//       {children}
-//     </CartContext.Provider>
-//   );
-// };
-
-// export default CartProvider;
