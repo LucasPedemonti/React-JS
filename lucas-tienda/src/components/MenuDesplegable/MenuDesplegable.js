@@ -61,22 +61,22 @@ const MenuDesplegable = () => {
         }}
       >
         <MenuItem>
-          <Link to="/gaming-producto/notebook" style={styles.link}>
+          <Link to="/gaming-producto/Notebook" style={styles.link}>
             NoteBook
           </Link>
         </MenuItem>
         <MenuItem>
-          <Link to="/gaming-producto/placasdevideo" style={styles.link}>
+          <Link to="/gaming-producto/Placadevideo" style={styles.link}>
             Placas de Video
           </Link>
         </MenuItem>
         <MenuItem>
-          <Link to="/gaming-producto/procesador" style={styles.link}>
+          <Link to="/gaming-producto/Procesador" style={styles.link}>
             Procesador
           </Link>
         </MenuItem>
         <MenuItem>
-          <Link to="/gaming-producto/monitor" style={styles.link}>
+          <Link to="/gaming-producto/Monitor" style={styles.link}>
             Monitor
           </Link>
         </MenuItem>        

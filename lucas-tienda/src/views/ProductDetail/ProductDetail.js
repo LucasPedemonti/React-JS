@@ -20,7 +20,7 @@ const ProductDetail = () => {
   const { id } = useParams();
  
   //console.log(id);
-  console.log(prodDetData);
+ // console.log(prodDetData);
   useEffect(() => {
     
     const getProducts = async () =>{

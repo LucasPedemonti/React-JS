@@ -1,0 +1,36 @@
+
+.productos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+}
+.categories{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    
+}
+.gamingProductoContainer{
+	display: flex;
+	flex-direction: column;
+	width: 90%;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	margin-top: 70px;
+}
+.gamingProductolTitle{
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	margin-top: 0px;
+	align-items: center;
+	font-family: "Poppins", sans-serif;
+	font-weight: 200;
+	background-color: rgb(189, 197, 194);
+	border-radius: 20px;
+}

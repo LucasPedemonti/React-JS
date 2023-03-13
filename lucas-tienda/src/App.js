@@ -9,11 +9,10 @@ import Nav from './components/Nav/Nav';
 
 //Views
 import Home from "./views/Home/Home";
-import About from "./views/About/About";
-import Contact from "./views/Contact/Contact";
 import Shop from "./views/Shop/Shop";
+import Contact from "./views/Contact/Contact";
 import ProductDetail from "./views/ProductDetail/ProductDetail";
-//import GamingProducto from "./views/GamingProducto/GamingProducto";
+import GamingProducto from "./views/GamingProducto/GamingProducto";
 
 
 
@@ -27,11 +26,10 @@ const App = () => {
           <Nav />              
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/shop" element={<Shop />} /> 
-            <Route path="/about" element={<About />} />
+            <Route path="/shop" element={<Shop />} />            
             <Route path="/contact" element={<Contact />} />       
             <Route path="/shop/details/:id" element={<ProductDetail />} />
-            {/* <Route path="/gaming-producto/:producto" element={<GamingProducto />} /> */}
+            <Route path="/gaming-producto/:producto" element={<GamingProducto />} />
           </Routes>                  
         
       </div>       
