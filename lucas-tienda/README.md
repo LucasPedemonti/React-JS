@@ -1,3 +1,24 @@
+#Nombre: Lucas Pedemonti
+#Proyecto Ecommerce: CoderHouse
+
+![Home](https://user-images.githubusercontent.com/108374367/224859408-683914a7-cf89-4449-9a05-971ad7ea5003.JPG)
+
+![Shop](https://user-images.githubusercontent.com/108374367/224859458-d836184e-52a2-4755-a706-e276f07ce407.JPG)
+
+![Detail](https://user-images.githubusercontent.com/108374367/224859472-898e30b7-840c-4375-a32a-e418e73000d9.JPG)
+
+![Filtrado](https://user-images.githubusercontent.com/108374367/224859478-190032cc-b240-4d5b-b530-04e26e41e5bd.JPG)
+
+![Finalizar compra](https://user-images.githubusercontent.com/108374367/224859483-03e0459e-2773-49fb-aca4-2382d2fb0e7e.JPG)
+
+
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
