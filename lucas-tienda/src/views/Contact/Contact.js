@@ -1,18 +1,46 @@
 import React from 'react';
+import "./Contact.css"
 
-const styles = {
-	containerContact: {
-		padding: 20,
-		textAlign: 'center',
-	},
-};
 
 const Contact = () => {
 	return (
-		<div style={styles.containerContact}>
-			<h1>Contact</h1>
-			<p>
+		<div className='contact-container'>
+			<h1 className='contact-title'>Contact</h1>
+			<p className='contact-parrafo'>
 				Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab amet
+				asperiores aliquid ex vel laudantium perspiciatis, rem fugiat voluptatem
+				eius minus unde blanditiis autem facilis maxime. Nesciunt id blanditiis
+				sunt.
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab amet
+				asperiores aliquid ex vel laudantium perspiciatis, rem fugiat voluptatem
+				eius minus unde blanditiis autem facilis maxime. Nesciunt id blanditiis
+				sunt.
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab amet
+				asperiores aliquid ex vel laudantium perspiciatis, rem fugiat voluptatem
+				eius minus unde blanditiis autem facilis maxime. Nesciunt id blanditiis
+				sunt.Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab amet
+				asperiores aliquid ex vel laudantium perspiciatis, rem fugiat voluptatem
+				eius minus unde blanditiis autem facilis maxime. Nesciunt id blanditiis
+				sunt.
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab amet
+				asperiores aliquid ex vel laudantium perspiciatis, rem fugiat voluptatem
+				eius minus unde blanditiis autem facilis maxime. Nesciunt id blanditiis
+				sunt.Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab amet
+				asperiores aliquid ex vel laudantium perspiciatis, rem fugiat voluptatem
+				eius minus unde blanditiis autem facilis maxime. Nesciunt id blanditiis
+				sunt.
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab amet
+				asperiores aliquid ex vel laudantium perspiciatis, rem fugiat voluptatem
+				eius minus unde blanditiis autem facilis maxime. Nesciunt id blanditiis
+				sunt.
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab amet
+				asperiores aliquid ex vel laudantium perspiciatis, rem fugiat voluptatem
+				eius minus unde blanditiis autem facilis maxime. Nesciunt id blanditiis
+				sunt.
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab amet
+				asperiores aliquid ex vel laudantium perspiciatis, rem fugiat voluptatem
+				eius minus unde blanditiis autem facilis maxime. Nesciunt id blanditiis
+				sunt.Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab amet
 				asperiores aliquid ex vel laudantium perspiciatis, rem fugiat voluptatem
 				eius minus unde blanditiis autem facilis maxime. Nesciunt id blanditiis
 				sunt.

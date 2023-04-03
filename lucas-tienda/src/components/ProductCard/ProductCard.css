@@ -1,15 +1,24 @@
-.containerCard{
-    max-width: 300px;
+.container-card{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     margin: 30px;
-    border: black solid 1px;    
+    background-color: blueviolet;
+    width: 250px;
+    
+    
 }
-.cardcontent{
-    background-color: rgba(144, 151, 151, 0.555);
+.card-content{
+    background-color: rgb(189, 197, 194);
 }
-.titleCard{
+.title-card{
     display: flex;
     align-items: center;
     justify-content: center;    
     text-decoration:underline;
-    width: 100%;
+    
+}
+.btn-detalle{
+    cursor: pointer;
 }
