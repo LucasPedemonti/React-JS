@@ -1,7 +1,5 @@
 import React, { useState } from "react";
-import CartContent from "../../components/CartContent/CartContent";
-import { useContext } from "react";
-import { itemsContext } from "../../context/CartContext";
+
 // Firebase
 import { db } from "../../firebase/firebase";
 import { collection, addDoc } from "firebase/firestore";
@@ -29,7 +27,6 @@ const initialState = {
 const Cart = () => {
   const [values, setValues] = useState(initialState);
   const [purchaseID, setPurchaseID] = useState("");
-  const { cart } = useContext(itemsContext);
 
   
 
@@ -49,10 +46,9 @@ const Cart = () => {
     setValues(initialState);
   };
 
-  return cart.length >  0 ? (
+  return (
     <div style={styles.containerCart}>
-      <CartContent />
-      <h1 className="FinalCompra">Finaliza tu orden de compra</h1>
+      <h1 className="FinalCompra">Finaliza tu compra</h1>
       <form className="FormContainer" onSubmit={handleOnSubmit}>
         <TextField
           placeholder="Name"
@@ -82,13 +78,11 @@ const Cart = () => {
           value={values.email}
           onChange={handleOnChange}
         />
-        <button className="btnASendAction">Enviar</button>
+        <button className="btnASendAction">Send</button>
       </form>
       {purchaseID ? <MensajeFinal purchaseID={purchaseID} /> : null}
     </div>
-  ) : ( 
-    <h2> Tu carrito esta vacio</h2>
-  )
+  );
 };
 
 export default Cart;

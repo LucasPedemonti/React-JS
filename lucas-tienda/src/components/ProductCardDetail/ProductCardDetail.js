@@ -5,11 +5,9 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 import './ProductCardDetail.css';
-import { useContext } from "react";
-import { itemsContext } from "../../context/CartContext";
-
+import ItemCount from '../ItemCount/ItemCount';
 const ProductCardDetail = ({ productData }) => {
-  const { buyProducts } = useContext (itemsContext);
+
     
   return (
     <Card className='containerCard'>
@@ -34,7 +32,7 @@ const ProductCardDetail = ({ productData }) => {
           <Typography variant="body2" fontWeight={800} color="text.secondary">
             ${productData.precio}
           </Typography>
-          <button onClick={()=> buyProducts(productData)} className='btnAddCart'>Agregar al carrito</button> 
+          <ItemCount />
 
         </CardContent>
       </CardActionArea>

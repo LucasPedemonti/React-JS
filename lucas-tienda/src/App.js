@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 //Components
 import Nav from './components/Nav/Nav';
-import ItemsProvider from "../src/context/CartContext";
+import CartState from "../src/context/CartContext";
 
 //Views
 import Home from "./views/Home/Home";
@@ -18,11 +18,16 @@ import Cart from "./views/Cart/Cart";
 import Error from "./views/Error/Error";
 
 
+
+
+
+
+
 const App = () => {
   return (
     <>
     <div className="App">
-      <ItemsProvider>
+      <CartState>
         <Router>           
           <Nav />              
           <Routes>
@@ -33,10 +38,9 @@ const App = () => {
             <Route path="*" element={<Error />} />     
             <Route path="/shop/details/:id" element={<ProductDetail />} />
             <Route path="/gaming-producto/:producto" element={<GamingProducto />} />
-            <Route path="/gaming-producto/:producto/details/:id" element={<ProductDetail />} /> 
           </Routes>    
          </Router>
-      </ItemsProvider>
+      </CartState>
     </div>
     
     </>          

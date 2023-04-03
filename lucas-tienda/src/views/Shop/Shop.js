@@ -1,18 +1,13 @@
 import React from 'react';
-import ProductCard from '../../components/ProductCard/ProductCard';
+import ProductList from '../../components/ProductList/ProductList';
 import './Shop.css';
 
 
-
 const Shop = () => {
-  
-  
   return (
-    <div className='shop-container'>
-      <h1 className='shop-title'>Productos</h1>
-		  <div className='shop-productos'>
-        <ProductCard />
-      </div>
+    <div className='shopContainer '>
+    <h1 className='shopTitle'>Productos</h1>
+		<ProductList />
 	</div>
   );
 };
