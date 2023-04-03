@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./GamingProducto.css"
-import  ProductCard from "../../components/ProductCard/ProductCard";
+import ProductCardDetail from "../../components/ProductCardDetail/ProductCardDetail";
 import Spinner from "../../components/Spinner/Spinner"
 
 //firebase
@@ -18,7 +18,7 @@ const GamingProducto = () => {
     
     
     const { producto } = useParams();
-    
+    console.log(productDataByProducto);
 
     useEffect(() => {
     
@@ -47,17 +47,13 @@ const GamingProducto = () => {
     ) : (
       
         productDataByProducto.map((producto) =>{
-         return (      
-            <div className="productos">
-                 <div className="gamingProductoContainer">
-                    <h1 className="gamingProductolTitle">
-                        Detalle del Producto
-                    </h1>
-                </div> 
-                <div  key={producto.id}>
-                    <ProductCard className="categories" productData={producto} /> 
-                </div>                
-           </div>                                    
+          return (      
+            <div className="detailContainer" key={producto.id}>
+              <h1 className="productDetailTitle">
+                Detalle del Producto
+              </h1>
+              <ProductCardDetail  productData={producto} /> 
+            </div>                                     
          )  
        })         
    )}

@@ -1,15 +1,30 @@
-.shopContainer {
-	width: 90%;
-	margin-top:70px;
+.shop-container{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	
+	width: 90%;	
+	justify-content: center;
+	align-items: center;
+	
 }
-.shopTitle{
-	margin-top: 0px;
+.shop-title{
+	margin-top:70px;	
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	font-family: "Poppins", sans-serif;
 	font-weight: 200;
 	background-color: rgb(189, 197, 194);
-	width: 100%;
+	width: 90%;
 	border-radius: 20px;
+	font-size:25px;
+}
+.shop-productos{
+	display: flex;	
+	flex-flow: row;	
+	align-items: center;
+	justify-content: center;
+	width: 90%;
+	
 }

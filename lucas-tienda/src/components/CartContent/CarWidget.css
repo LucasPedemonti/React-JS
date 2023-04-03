@@ -1,0 +1,36 @@
+.cartContent{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px 2px 2px;
+}
+.name{
+    width: 100px;
+}
+.modelo{
+    width: 300px;
+}
+.precio{
+    width: 150px;
+}
+.cantidad{
+    width: 100px;
+    padding: 20px;
+}
+.counterBtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    background-color: rgba(109, 138, 138, 0.76);
+    cursor: pointer;
+    font-weight:  bold;
+}
+.numero{
+    width: 30px;
+    border-radius: 2px;
+    font-weight: bold;
+}
+.cartDltBton{
+    cursor: pointer;
+}

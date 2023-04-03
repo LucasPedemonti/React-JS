@@ -1,86 +1,43 @@
-import React, { useState, useContext, createContext } from 'react';
+import React, { createContext, useEffect,useState } from "react";
+import { db } from "../firebase/firebase";
+import { collection,query,getDocs } from "firebase/firestore";
 
-const initialState = {
-    items: [],
-    isOpen: false,
-    addItemToCart: () => {},
-    getNumerOfItems: () => {},
-    openCart: () => {},
-    closeCart: () => {},
-    updateCart: () => {},
-    deleteCartItem: () => {},
-    emptyCart: () => {},
-};
+export const itemsContext = createContext();
 
-const CartContext = createContext(initialState);
-
-const CartState = ({ children }) => {
-    const [items, setItems] = useState([]);
-    const [isOpen, setIsOpen] = useState([false]);
-    const handleOpenCart = () => {
-        setIsOpen(true);
-    };
-    const handleCloseCart = () => {
-        setIsOpen(false);
-    };
-    const handleAddItemToCart = (item, quantity) => {
-        const temp = [...items];
-
-        const found = temp.find((product) => product.id === item.id);
-
-        if (found) {
-            found.quantity += quantity;
-            temp.push(item);
-        }
-        setItems([...temp]);
-    };
-    const handleNumberOfItems = () => {
-        const total = items.length;
-        return total;
-    };
-    const handleDeleteCartItem = (id) => {
-        const temp = [...items];
-        const found = temp.find((product) => product.id === id);
-         const index = temp.indexOf(found);
-        if (found) {
-            temp.splice(index, 1);
-        }
-        setItems([...temp]);
-    };
-    const handleUpdateCartItemQty = (id, quantity) => {
-        const temp = [...items];
-        const found = temp.find((product) => product.id === id);
+const ItemsProvider = ({ children }) =>{
+  const [productData, setProductData] = useState([]);
+  const [cart, setCart] = useState([]);
+  
+  
+ 
+  useEffect(() => {
     
-        if (found) {
-          found.quantity = quantity;
-        }
-        setItems([...temp]);
-      };
-      const handleEmptyCart = () => {
-        setItems([]);
-      };
-      return (
-        <CartContext.Provider
-          value={{
-            items,
-            isOpen,
-            addItemToCart: handleAddItemToCart,
-            getNumberOfItems: handleNumberOfItems,
-            openCart: handleOpenCart,
-            closeCart: handleCloseCart,
-            updateCart: handleUpdateCartItemQty,
-            deleteCartItem: handleDeleteCartItem,
-            emptyCart: handleEmptyCart,
-          }}
-        >
-          {children}
-        </CartContext.Provider>
-      );
-};  
-
-export default CartState;
-
-export const useCartContext = () => {
-  return useContext(CartContext);
+    const getProducts = async () =>{
+      const q = query(collection(db, "gaming"));
+      const querySnapshot = await getDocs(q);
+      const docs = [];
+      querySnapshot.forEach((doc) => {   
+       
+        docs.push({...doc.data(), id: doc.id })
+      });
+      setProductData(docs);
+    };
+    getProducts(); 
+  }, []);
+  const buyProducts = (producto) => {
+    console.log(producto);
+    const productRepeat = cart.find((item) => item.id === producto.id);
+    if (productRepeat){
+      setCart(cart.map((item)=> (item.id === producto.id ? { ...producto, cantidad: productRepeat.cantidad + 1 } : item )));
+    }else{
+      setCart([...cart, producto])
+    }    
+  };
+  
+  return (    
+   <itemsContext.Provider value={{ productData, cart, setCart, buyProducts }}>
+    { children }
+   </itemsContext.Provider>
+  );
 };
-
+export default ItemsProvider;
